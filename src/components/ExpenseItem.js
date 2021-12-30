@@ -10,7 +10,7 @@ const ExpenseItem = () => {
     day: "numeric",
   };
 
-  const date = new Date(2021, 2, 28).toLocaleDateString("en-US", DATE_OPTIONS);
+  const date = new Date(2021, 2, 28);
 
   const item = "Car Insurance";
 
@@ -18,7 +18,7 @@ const ExpenseItem = () => {
 
   return (
     <div className="expense-item">
-      <div>{date}</div>
+      <div>{date.toLocaleDateString("en-US", DATE_OPTIONS)}</div>
       <div className="expense-item__description">
         <h2>{item}</h2>
         <div className="expense-item__price">{price}</div>
